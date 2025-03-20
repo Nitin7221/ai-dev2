@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Generate Title with GenAI</title>
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-[#0d1b2a] text-white font-sans">
+  <div id="navbar"></div>
+  <div class="flex h-screen">
+   <!-- Sidebar -->
+   <div class="w-1/4 bg-[#1b263b] p-4 overflow-y-auto">
+    <h2 class="text-lg font-semibold mb-4">History</h2>
+    <div class="mb-4">
+     <h3 class="text-sm font-semibold mb-2">TODAY</h3>
+     <ul class="space-y-2">
+      <li class="hover:text-blue-400 cursor-pointer">Best title for blog</li>
+      <li class="hover:text-blue-400 cursor-pointer">Great title for food blog</li>
+      <li class="hover:text-blue-400 cursor-pointer">Awesome title for new youtube channel</li>
+      <li class="hover:text-blue-400 cursor-pointer">Generate creative title for football app</li>
+      <li class="hover:text-blue-400 cursor-pointer">Trendy title for travel app</li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-sm font-semibold mb-2">YESTERDAY</h3>
+     <ul class="space-y-2">
+      <li class="hover:text-blue-400 cursor-pointer">Generate creative title for football app</li>
+      <li class="hover:text-blue-400 cursor-pointer">Awesome title for new youtube channel</li>
+      <li class="hover:text-blue-400 cursor-pointer">Great title for food blog</li>
+      <li class="hover:text-blue-400 cursor-pointer">Best title for blog</li>
+      <li class="hover:text-blue-400 cursor-pointer">Trendy title for travel app</li>
+     </ul>
+    </div>
+    <button class="mt-4 text-sm text-blue-500 hover:underline">Clear</button>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 flex flex-col">
+    <!-- Header -->
+    <div class="bg-[#1b263b] p-4 flex items-center justify-between">
+     <h1 class="text-2xl font-semibold">
+      Generate title with <span class="text-red-500">GenAI</span>
+     </h1>
+     <div class="flex space-x-4">
+      <button class="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600" onclick="changeIframeContent('title')">Title</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('article')">Article</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('image')">Image</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('code')">Code</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('email')">Email</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('grammar')">Grammar</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('ad')">Ad</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('fullscreen')">Fullscreen</button>
+      <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('history')">History</button>
+     </div>
+    </div>
+    <!-- Input Section -->
+    <div class="p-4 flex flex-col space-y-4">
+     <input class="p-2 bg-[#1b263b] rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your request (idea, topic, and other details) to get your content generated" type="text"/>
+     <button class="px-4 py-2 bg-blue-500 rounded self-end hover:bg-blue-600">Generate</button>
+    </div>
+    <!-- Card Section -->
+    <div class="flex-1 p-4">
+     <div class="bg-[#1b263b] p-4 rounded flex flex-col items-center justify-center">
+      <img alt="A cute robot illustration" class="mb-4" src="https://placehold.co/100x100"/>
+      <p class="text-center">
+       This is default card example. Once you fill the form and hit on generate button you will see below data.
+      </p>
+      <p class="text-center">
+       Scroll to see more...
+      </p>
+     </div>
+    </div>
+    <!-- Output Section -->
+    <div class="bg-[#1b263b] p-4">
+     <div class="flex items-center space-x-2 mb-4">
+      <i class="fas fa-robot text-blue-500"></i>
+      <p>GenAI BOT is generating content for you...</p>
+     </div>
+     <div class="flex items-center space-x-2 mb-4">
+      <i class="fas fa-user text-yellow-500"></i>
+      <p>You: Title for best bootstrap admin templates.</p>
+     </div>
+     <div class="bg-[#0d1b2a] p-4 rounded">
+      <div class="flex items-center space-x-2 mb-4">
+       <button class="px-2 py-1 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Normal</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">B</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">I</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">U</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">A</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H1</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H2</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H3</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H4</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H5</button>
+       <button class="px-2 py-1 hover:bg-[#2a3b4c]">H6</button>
+      </div>
+      <ul class="list-disc pl-5 space-y-2">
+       <li>Revamp Your Dashboard: The Top 10 Admin Templates of 2024</li>
+       <li>Sleek and Functional: Choosing the Perfect Admin Template for Your Project</li>
+       <li>Elevate Your User Experience: The Best Admin Templates for Web Development</li>
+       <li>From Bootstrap to Tailwind: Exploring the Top-Rated Admin Templates</li>
+       <li>Navigate Your Dashboard with Ease: The Ultimate Guide to Admin Templates</li>
+      </ul>
+     </div>
+     <div class="flex space-x-4 mt-4">
+      <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Clear</button>
+      <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Copy</button>
+      <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Regenerate</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+    fetch('../navbar/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
+ </body>
+</html>
