@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Generate Title with GenAI</title>
+  <link rel="stylesheet" href="generate.css">
   <link rel="stylesheet" href="../navbar/navbar.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -13,152 +14,173 @@
 <body class="bg-[#0d1b2a] text-white font-sans">
   <div id="navbar"></div>
   <div class="flex h-screen">
-    <!-- Sidebar -->
-    <!-- Sidebar (updated classes) -->
-    <div class="w-1/4 bg-[#1b263b] p-4 overflow-y-auto border-r border-[#2a3b4c] shadow-lg">
-      <h2 class="text-lg font-semibold mb-6 text-blue-400">History</h2>
+    <!-- Updated Sidebar -->
+    <div class="w-1/4 bg-[#1b263b] p-4 overflow-y-auto border-r border-[#2a3b4c] shadow-lg scrollbar">
+      <!-- Popular Categories Section -->
       <div class="mb-6">
-        <h3 class="text-xs font-semibold mb-3 text-[#718096] uppercase tracking-wider">TODAY</h3>
+        <h2 class="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+          <i class="fas fa-folder-open mr-2"></i> Popular Categories
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-[#2a3b4c] text-sm rounded-full cursor-pointer hover:bg-blue-500 transition-colors">
+            Blog Titles
+          </span>
+          <span class="px-3 py-1 bg-[#2a3b4c] text-sm rounded-full cursor-pointer hover:bg-blue-500 transition-colors">
+            App Names
+          </span>
+          <span class="px-3 py-1 bg-[#2a3b4c] text-sm rounded-full cursor-pointer hover:bg-blue-500 transition-colors">
+            Marketing Copy
+          </span>
+          <span class="px-3 py-1 bg-[#2a3b4c] text-sm rounded-full cursor-pointer hover:bg-blue-500 transition-colors">
+            Social Media
+          </span>
+          <span class="px-3 py-1 bg-[#2a3b4c] text-sm rounded-full cursor-pointer hover:bg-blue-500 transition-colors">
+            Technical Writing
+          </span>
+        </div>
+      </div>
+
+      <!-- History Section (Existing) -->
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+          <i class="fas fa-history mr-2"></i> Recent History
+        </h2>
+        <!-- Existing history content remains same -->
+      </div>
+
+      <!-- Saved Items Section -->
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+          <i class="fas fa-star mr-2"></i> Saved Items
+        </h2>
         <ul class="space-y-1">
           <li
             class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Best title for blog
+            <i class="fas fa-file-alt mr-2"></i>Blog Title Template
           </li>
           <li
             class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Great title for food blog
+            <i class="fas fa-hashtag mr-2"></i>Marketing Hashtags
           </li>
           <li
             class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Awesome title for new youtube channel
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Generate creative title for football app
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Trendy title for travel app
+            <i class="fas fa-code mr-2"></i>Code Snippet Format
           </li>
         </ul>
       </div>
-      <div class="mb-6">
-        <h3 class="text-xs font-semibold mb-3 text-[#718096] uppercase tracking-wider">YESTERDAY</h3>
-        <ul class="space-y-1">
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Generate creative title for football app
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Awesome title for new youtube channel
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Great title for food blog
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Best title for blog
-          </li>
-          <li
-            class="px-3 py-2 rounded-lg hover:bg-[#2a3b4c] hover:text-blue-400 cursor-pointer transition-colors duration-200">
-            Trendy title for travel app
-          </li>
-        </ul>
+
+      <!-- Quick Actions -->
+      <div class="mt-auto">
+        <h2 class="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+          <i class="fas fa-bolt mr-2"></i> Quick Actions
+        </h2>
+        <button class="w-full px-3 py-2 mb-2 text-left bg-[#2a3b4c] hover:bg-blue-500 rounded-lg transition-colors">
+          <i class="fas fa-plus-circle mr-2"></i>New Request
+        </button>
+        <button class="w-full px-3 py-2 mb-2 text-left bg-[#2a3b4c] hover:bg-blue-500 rounded-lg transition-colors">
+          <i class="fas fa-download mr-2"></i>Export History
+        </button>
+        <button class="w-full px-3 py-2 text-left bg-[#2a3b4c] hover:bg-blue-500 rounded-lg transition-colors">
+          <i class="fas fa-cog mr-2"></i>Settings
+        </button>
       </div>
+
+      <!-- Clear History Button -->
       <button
-        class="w-full px-3 py-2 text-sm text-[#718096] hover:bg-[#2a3b4c] hover:text-blue-400 rounded-lg transition-colors duration-200">
-        Clear All History
+        class="mt-4 px-3 py-2 text-sm text-[#718096] hover:bg-[#2a3b4c] hover:text-blue-400 rounded-lg transition-colors">
+        <i class="fas fa-trash-alt mr-2"></i>Clear History
       </button>
     </div>
-    <!-- Main Content -->
     <div class="flex-1 flex flex-col">
       <!-- Header -->
       <div class="bg-[#1b263b] p-4 flex items-center justify-between">
         <h1 class="text-2xl font-semibold">
-          Generate title with <span class="text-red-500">GenAI</span>
+          Generate content with <span class="text-red-500">GenAI</span>
         </h1>
         <div class="flex space-x-4">
-          <button class="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600"
-            onclick="changeIframeContent('title')">Title</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('article')">Article</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('image')">Image</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('code')">Code</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('email')">Email</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('grammar')">Grammar</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('ad')">Ad</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('fullscreen')">Fullscreen</button>
-          <button class="px-4 py-2 hover:text-blue-400" onclick="changeIframeContent('history')">History</button>
+          <button class="px-4 py-2 rounded hover:bg-blue-600 nav-button active" 
+                  data-content="title" onclick="changeContent('title')">Title</button>
+          <button class="px-4 py-2 rounded hover:bg-blue-600 nav-button" 
+                  data-content="article" onclick="changeContent('article')">Article</button>
+          <button class="px-4 py-2 rounded hover:bg-blue-600 nav-button" 
+                  data-content="chat" onclick="changeContent('chat')">Chat</button>
         </div>
       </div>
-      <!-- Input Section -->
-      <div class="p-4 flex flex-col space-y-4">
-        <input
-          class="p-2 bg-[#1b263b] rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Enter your request (idea, topic, and other details) to get your content generated" type="text" />
-        <button class="px-4 py-2 bg-blue-500 rounded self-end hover:bg-blue-600">Generate</button>
-      </div>
-      <!-- Card Section -->
-      <div class="flex-1 p-4">
-        <div class="bg-[#1b263b] p-4 rounded flex flex-col items-center justify-center">
-          <img alt="A cute robot illustration" class="mb-4" src="https://placehold.co/100x100" />
-          <p class="text-center">
-            This is default card example. Once you fill the form and hit on generate button you will see below data.
-          </p>
-          <p class="text-center">
-            Scroll to see more...
-          </p>
+
+      <!-- Title Content -->
+      <div class="content-section active" id="title-content">
+        <!-- Input Section -->
+        <div class="p-4 flex flex-col space-y-4">
+          <input
+            class="p-2 bg-[#1b263b] rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your title request..." type="text" />
+          <button class="px-4 py-2 bg-blue-500 rounded self-end hover:bg-blue-600">Generate Titles</button>
         </div>
-      </div>
-      <!-- Output Section -->
-      <div class="bg-[#1b263b] p-4">
-        <div class="flex items-center space-x-2 mb-4">
-          <i class="fas fa-robot text-blue-500"></i>
-          <p>GenAI BOT is generating content for you...</p>
-        </div>
-        <div class="flex items-center space-x-2 mb-4">
-          <i class="fas fa-user text-yellow-500"></i>
-          <p>You: Title for best bootstrap admin templates.</p>
-        </div>
-        <div class="bg-[#0d1b2a] p-4 rounded">
-          <div class="flex items-center space-x-2 mb-4">
-            <button class="px-2 py-1 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Normal</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">B</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">I</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">U</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">A</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H1</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H2</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H3</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H4</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H5</button>
-            <button class="px-2 py-1 hover:bg-[#2a3b4c]">H6</button>
+
+        <!-- Output Section -->
+        <div class="bg-[#1b263b] p-4">
+          <div class="bg-[#0d1b2a] p-4 rounded">
+            <div class="list-disc pl-5 space-y-2 editable-content focus:outline-none" contenteditable="true"
+              data-placeholder="Generated titles will appear here...">
+              <div>Revamp Your Dashboard: The Top 10 Admin Templates of 2024</div>
+              <div>Sleek and Functional: Choosing the Perfect Admin Template</div>
+              <div>Elevate Your User Experience: Best Admin Templates</div>
+            </div>
           </div>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Revamp Your Dashboard: The Top 10 Admin Templates of 2024</li>
-            <li>Sleek and Functional: Choosing the Perfect Admin Template for Your Project</li>
-            <li>Elevate Your User Experience: The Best Admin Templates for Web Development</li>
-            <li>From Bootstrap to Tailwind: Exploring the Top-Rated Admin Templates</li>
-            <li>Navigate Your Dashboard with Ease: The Ultimate Guide to Admin Templates</li>
-          </ul>
         </div>
-        <div class="flex space-x-4 mt-4">
-          <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Clear</button>
-          <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Copy</button>
-          <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Regenerate</button>
+      </div>
+
+      <!-- Article Content -->
+      <div class="content-section" id="article-content">
+        <div class="p-4 flex flex-col space-y-4">
+          <input
+            class="p-2 bg-[#1b263b] rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter article topic..." type="text" />
+          <button class="px-4 py-2 bg-blue-500 rounded self-end hover:bg-blue-600">Generate Article</button>
         </div>
+
+        <div class="bg-[#1b263b] p-4">
+          <div class="bg-[#0d1b2a] p-4 rounded">
+            <div class="editable-content focus:outline-none" contenteditable="true"
+              data-placeholder="Generated article will appear here...">
+              <p>Start with an engaging introduction...</p>
+              <p>Develop your main arguments...</p>
+              <p>Conclude with key takeaways...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Content -->
+      <div class="content-section" id="chat-content">
+        <div class="p-4 flex flex-col space-y-4">
+          <input
+            class="p-2 bg-[#1b263b] rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter article topic..." type="text" />
+          <button class="px-4 py-2 bg-blue-500 rounded self-end hover:bg-blue-600">Generate Chat</button>
+        </div>
+
+        <div class="bg-[#1b263b] p-4">
+          <div class="bg-[#0d1b2a] p-4 rounded">
+            <div class="editable-content focus:outline-none" contenteditable="true"
+              data-placeholder="Generated chat will appear here...">
+              <p>Start with an engaging conversation...</p>
+              <p>Develop your main interests...</p>
+              <p>Conclude with greetings...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Common Action Buttons -->
+      <div class="flex space-x-4 mt-4 p-4">
+        <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Clear</button>
+        <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Copy</button>
+        <button class="px-4 py-2 bg-[#1b263b] rounded hover:bg-[#2a3b4c]">Regenerate</button>
       </div>
     </div>
   </div>
-  <script>
-    fetch('../navbar/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading navbar:', error));
-  </script>
-</body>
 
+  <script src="script.js"></script>
+</body>
 </html>
